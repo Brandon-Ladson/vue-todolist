@@ -9,7 +9,44 @@
   </head>
   <body>
 
+    <div id="app">
 
+      <!-- contenitore pagina-->
+      <div class="container">
+
+        <h1>To Do List</h1>
+
+        <!-- container input e bottone -->
+        <div class="top-content">
+
+          <input type="text" v-model="oggetto" placeholder="Nuovo Todo">
+
+          <button @click="aggiungiTodo">Aggiungi</button>
+
+        </div>
+
+        <!-- container lista todo -->
+        <div class="bottom-content">
+
+          <!-- lista todo -->
+          <ul>
+
+            <li v-for="oggetto in oggetti">
+
+              {{oggetto}}
+
+              <!-- bottone per eliminare todo -->
+              <i class="fas fa-times"></i>
+
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
 
     <!-- javascript -->
     <script type="text/javascript" src="js/script.js">

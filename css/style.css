@@ -4,3 +4,70 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body{
+  font-family: sans-serif;
+}
+
+/* regole container */
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #001533;
+  height: 100vh;
+  padding-top: 150px;
+}
+
+.container h1{
+  color: #00e165;
+}
+
+/* regole top-content */
+.top-content{
+  display: flex;
+  margin: 20px 0;
+}
+
+/* regole input */
+.top-content input{
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid #dadee1;
+  margin-right: 10px;
+  width: 300px;
+}
+
+/* regole bottone */
+.top-content button{
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 2px solid #dadee1;
+  margin-left: 10px;
+  background-color: #f5f7f7;
+}
+
+.top-content button:hover{
+  cursor: pointer;
+  background-color: #00e165;
+  border: 2px solid #fff;
+}
+
+/* regole lista todo */
+.bottom-content ul{
+  background-color: #f5f7f7;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+li{
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+  padding: 5px;
+  border-bottom: 2px solid #dadee1;
+}
+
+.bottom-content ul li i:hover{
+  cursor: pointer;
+}
