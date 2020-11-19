@@ -15,6 +15,9 @@ var app = new Vue ({
     aggiungiTodo: function () {
       this.oggetti.push(this.oggetto);
       this.oggetto = '';
+    },
+    eliminaTodo: function (index) {
+      this.oggetti.splice(index, 1)
     }
   }
 });

@@ -31,12 +31,12 @@
           <!-- lista todo -->
           <ul>
 
-            <li v-for="oggetto in oggetti">
+            <li v-for="(oggetto, index) in oggetti">
 
               {{oggetto}}
 
               <!-- bottone per eliminare todo -->
-              <i class="fas fa-times"></i>
+              <i class="fas fa-times" @click="eliminaTodo(index)"></i>
 
             </li>
 
