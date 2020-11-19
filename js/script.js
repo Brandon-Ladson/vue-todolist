@@ -13,6 +13,7 @@ var app = new Vue ({
     alertAttIns: 'invisibile',
     alertNoAtt: 'invisibile',
     listaAtt: 'invisibile',
+    messaggeNip: 'visibile'
   },
   methods: {
     aggiungiTodo: function () {
@@ -26,12 +27,14 @@ var app = new Vue ({
         this.listaAtt = 'visibile';
         this.oggetti.push(this.oggetto);
         this.oggetto = '';
+        this.messaggeNip ='invisibile';
       }
     },
     eliminaTodo: function (index) {
       this.oggetti.splice(index, 1)
       if (this.oggetti == '') {
         this.listaAtt = 'invisibile';
+        this.messaggeNip ='visibile';
       }
     },
     clickSpuntaOk: function () {
