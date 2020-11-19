@@ -12,6 +12,7 @@ body{
 /* regole container */
 .container{
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   background-color: #001533;
@@ -70,4 +71,74 @@ li{
 
 .bottom-content ul li i:hover{
   cursor: pointer;
+}
+
+/* regole alert attività inserita */
+.container #alert-attività-inserita{
+  background-color: #fff;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid #00e165;
+}
+
+.container #alert-attività-inserita p{
+  margin: 10px 0;
+}
+
+.container #alert-attività-inserita i{
+  margin: 0 5px;
+  font-size: 30px;
+}
+
+.container #alert-attività-inserita i:hover{
+  cursor: pointer;
+}
+
+.container #alert-attività-inserita .fa-check-circle{
+  color: #4CC417;
+}
+
+.container #alert-attività-inserita .fa-times-circle{
+  color: #FF0000;
+}
+
+/* regole alert nessuna attivita */
+.container #alert-nessuna-attivita{
+  background-color: #fff;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid #00e165;
+}
+
+.container #alert-nessuna-attivita p{
+  margin: 10px 0;
+}
+
+.container #alert-nessuna-attivita i{
+  font-size: 30px;
+  color: #FF0000;
+}
+
+.container #alert-nessuna-attivita i:hover{
+  cursor: pointer;
+}
+
+/* classe invisibile */
+.invisibile{
+  display: none;
+}
+
+/* classe visisbile */
+.visibile{
+  display: block;
 }

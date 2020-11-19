@@ -9,15 +9,35 @@ var app = new Vue ({
   el: '#app',
   data: {
     oggetto: '',
-    oggetti: []
+    oggetti: [],
+    myClass1: 'invisibile',
+    myClass2: 'invisibile'
   },
   methods: {
     aggiungiTodo: function () {
-      this.oggetti.push(this.oggetto);
-      this.oggetto = '';
+      if (this.oggetto === '') {
+        this.myClass2 = 'visibile';
+
+      } else if (this.oggetti.includes(this.oggetto)) {
+        this.myClass1 = 'visibile';
+
+      } else {
+        this.oggetti.push(this.oggetto);
+        this.oggetto = '';
+      }
     },
     eliminaTodo: function (index) {
       this.oggetti.splice(index, 1)
+    },
+    clickSpuntaOk: function () {
+      this.oggetti.push(this.oggetto);
+      this.oggetto = '';
+      this.myClass1 = 'invisibile';
+    },
+    clickSpuntaNo: function () {
+      this.myClass1 = 'invisibile';
+      this.myClass2 = 'invisibile';
+      this.oggetto = '';
     }
   }
 });

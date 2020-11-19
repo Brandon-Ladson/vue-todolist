@@ -14,6 +14,39 @@
       <!-- contenitore pagina-->
       <div class="container">
 
+        <!-- alert per attivita inserita -->
+        <div id="alert-attività-inserita" :class="myClass1">
+
+          <h3>ATTENZIONE</h3>
+
+          <p>
+            Hai gi&#224; inserito questa attivit&#224;.<br>
+            Vuoi inserirla ancora?
+          </p>
+
+          <div class="container-buttons">
+
+            <i @click="clickSpuntaOk" class="fas fa-check-circle"></i>
+
+            <i @click="clickSpuntaNo" class="fas fa-times-circle"></i>
+
+          </div>
+
+        </div>
+
+        <!-- alert nessuna attivita -->
+        <div id="alert-nessuna-attivita" :class="myClass2">
+
+          <h3>ATTENZIONE</h3>
+
+          <p>
+            Non hai inserito nessuna attivit&#224;
+          </p>
+
+          <i @click="clickSpuntaNo" class="fas fa-times-circle"></i>
+
+        </div>
+
         <h1>To Do List</h1>
 
         <!-- container input e bottone -->
