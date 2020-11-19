@@ -15,7 +15,7 @@
       <div class="container">
 
         <!-- alert per attivita inserita -->
-        <div id="alert-attività-inserita" :class="myClass1">
+        <div id="alert-attività-inserita" :class="alertAttIns">
 
           <h3>ATTENZIONE</h3>
 
@@ -35,7 +35,7 @@
         </div>
 
         <!-- alert nessuna attivita -->
-        <div id="alert-nessuna-attivita" :class="myClass2">
+        <div id="alert-nessuna-attivita" :class="alertNoAtt">
 
           <h3>ATTENZIONE</h3>
 
@@ -62,7 +62,7 @@
         <div class="bottom-content">
 
           <!-- lista todo -->
-          <ul>
+          <ul :class="listaAtt">
 
             <li v-for="(oggetto, index) in oggetti">
 

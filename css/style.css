@@ -71,6 +71,7 @@ li{
 
 .bottom-content ul li i:hover{
   cursor: pointer;
+  color: #00e165;
 }
 
 /* regole alert attività inserita */

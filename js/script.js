@@ -10,33 +10,38 @@ var app = new Vue ({
   data: {
     oggetto: '',
     oggetti: [],
-    myClass1: 'invisibile',
-    myClass2: 'invisibile'
+    alertAttIns: 'invisibile',
+    alertNoAtt: 'invisibile',
+    listaAtt: 'invisibile',
   },
   methods: {
     aggiungiTodo: function () {
       if (this.oggetto === '') {
-        this.myClass2 = 'visibile';
+        this.alertNoAtt = 'visibile';
 
       } else if (this.oggetti.includes(this.oggetto)) {
-        this.myClass1 = 'visibile';
+        this.alertAttIns = 'visibile';
 
       } else {
+        this.listaAtt = 'visibile';
         this.oggetti.push(this.oggetto);
         this.oggetto = '';
       }
     },
     eliminaTodo: function (index) {
       this.oggetti.splice(index, 1)
+      if (this.oggetti == '') {
+        this.listaAtt = 'invisibile';
+      }
     },
     clickSpuntaOk: function () {
       this.oggetti.push(this.oggetto);
       this.oggetto = '';
-      this.myClass1 = 'invisibile';
+      this.alertAttIns = 'invisibile';
     },
     clickSpuntaNo: function () {
-      this.myClass1 = 'invisibile';
-      this.myClass2 = 'invisibile';
+      this.alertAttIns = 'invisibile';
+      this.alertNoAtt = 'invisibile';
       this.oggetto = '';
     }
   }
