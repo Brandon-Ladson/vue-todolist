@@ -52,7 +52,7 @@
         <!-- container input e bottone -->
         <div class="top-content">
 
-          <input type="text" v-model="oggetto" placeholder="Nuovo Todo">
+          <input type="text" v-model="oggetto" v-on:keydown.enter="aggiungiTodo" placeholder="Nuovo Todo">
 
           <button @click="aggiungiTodo">Aggiungi</button>
 
